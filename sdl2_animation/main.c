@@ -35,7 +35,7 @@ int main() {
         return 1;
     }
 
-    // Create a streaming SDL texture with RGB24 format, e.g. RGB with 1 byte per color channel
+    // Create a streaming SDL texture with RGB24 format, i.e. RGB with 1 byte per color channel
     SDL_Texture *texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB24, SDL_TEXTUREACCESS_STREAMING,
                                              GRID_WIDTH, GRID_HEIGHT);
     if (!texture) {
@@ -94,3 +94,4 @@ int main() {
     SDL_Quit();
     return 0;
 }
+

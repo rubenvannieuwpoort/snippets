@@ -1,0 +1,6 @@
+parallel
+serial
+.vscode/
+.vs/
+x64/
+*.vcxproj.*
