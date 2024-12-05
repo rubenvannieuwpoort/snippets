@@ -1,0 +1,16 @@
+#!/bin/bash
+
+(cd "./benchmarks/" && make > /dev/null)
+
+for dir in "$@"; do
+  (cd "./benchmarks/$dir/" && make > /dev/null)
+done
+
+echo -n ";"
+python run_benchmark.py -h
+
+for dir in "$@"; do
+  echo -n "${dir};"
+  python run_benchmark.py "./benchmarks/$dir/run"
+done
+
